@@ -1,0 +1,112 @@
+**Arquivo `style.css`:**
+```css
+:root {
+    --preto-fundo: #0a0a0a;
+    --preto-card: #141414;
+    --dourado: #D4AF37;
+    --dourado-claro: #F3E5AB;
+    --branco: #FFFFFF;
+}
+
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--preto-fundo);
+    color: var(--branco);
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 1px solid #222;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--dourado);
+    letter-spacing: 3px;
+    font-family: serif;
+    margin: 0;
+}
+
+.tagline {
+    color: var(--dourado-claro);
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.catalogo {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.catalogo h2 {
+    text-align: center;
+    color: var(--dourado);
+    margin-bottom: 30px;
+}
+
+.grid-produtos {
+    display: grid;
+    /* Faz o layout adaptar sozinho para celular ou PC */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.card-produto {
+    background: var(--preto-card);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #333;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.card-produto:hover {
+    transform: translateY(-5px);
+    border-color: var(--dourado);
+}
+
+.card-produto img {
+    width: 100%;
+    border-radius: 4px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.card-produto h3 {
+    font-size: 1.1rem;
+    margin: 15px 0 5px;
+}
+
+.preco {
+    color: var(--dourado);
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.btn-comprar {
+    display: block;
+    background-color: var(--dourado);
+    color: var(--preto-fundo);
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    z-index: 100;
+}
